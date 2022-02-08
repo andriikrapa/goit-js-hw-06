@@ -23,7 +23,11 @@ button {
   cursor: pointer;
 }
 
-ul.gallery {
+.gallery {
   display: flex;
   flex-wrap: wrap;
+}
+
+.galleryImages {
+  width: 300px;
 }
