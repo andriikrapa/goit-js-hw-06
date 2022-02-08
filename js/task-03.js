@@ -12,3 +12,31 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+/*
+//* Make markup with "document.createElement() in function"
+*/
+// const galleryEl = document.querySelector('ul.gallery');
+
+// const makeGalleryCard = image => {
+//   const imageEl = document.createElement('img');
+//   imageEl.src = image.url;
+//   imageEl.alt = image.alt;
+//   imageEl.width = 300;
+
+//   return imageEl;
+// };
+
+// const elements = images.map(makeGalleryCard);
+
+// galleryEl.append(...elements);
+ 
+
+// //* Make markup .innerHTML */
+const galleryEl = document.querySelector('ul.gallery');
+
+const markup = images
+  .map((image) => `<img src='${image.url}' alt='${image.alt}' width='300'>`)
+  .join("");
+
+galleryEl.insertAdjacentHTML("beforeend", markup);
