@@ -5,15 +5,15 @@ const counterValueEl = document.querySelector('#value');
 
 let counterValue = 0;
 
-const decrementBtnClickHandler = () => {
+const onDecrementBtnClick = () => {
     counterValue -= 1;
     counterValueEl.textContent = counterValue;
 };
 
-const incrementBtnClickHandler = () => {
+const onIncrementBtnClick = () => {
     counterValue += 1;
     counterValueEl.textContent = counterValue;
 }
 
-decrementBtnEl.addEventListener("click", decrementBtnClickHandler);
-incrementBtnEl.addEventListener("click", incrementBtnClickHandler);
+decrementBtnEl.addEventListener("click", onDecrementBtnClick);
+incrementBtnEl.addEventListener("click", onIncrementBtnClick);
